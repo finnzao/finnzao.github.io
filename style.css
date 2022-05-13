@@ -314,13 +314,13 @@ body {
     min-width: 400px;
     max-width: 530px;
     padding: 100px 100px 40px;
-    
+    /* padding: 80px 20px 40px; */
     position: relative;
     vertical-align: top;
     margin: 10px;
     font-family: 'helvetica', san-serif;
     min-height: 25vh;
-    background-color: #04040400;
+    background: #00000091;
     background-image: url("./components/img/eye.png");
     background-position: center;
     background-repeat: no-repeat;
