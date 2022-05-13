@@ -1,11 +1,34 @@
-$(document).ready(function () {
-    $(".menu_btn").click(function () {
-        $(".menu-mobile").slideToggle("slow")
-    })
-})
+// var button = document.getElementById("action-btn")
 
-// const scroll = new SmoothScroll('a[href*="#"]', {
-//     speed: 400
-// });
-{/* <script
-src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script> */}
+// button.addEventListener("click", function () {
+//     var container = document.getElementById("form")
+//     if (container.style.display === "none") {
+//         container.style.display = "block"
+//     } else {
+//         container.style.display = "none"
+//     }
+// })
+// document.querySelector("#action-btn").addEventListener("click", function () {
+//     document.querySelector("#form").classList.add("active")
+// })
+
+
+function startshow(modalID) {
+    const modal = document.getElementById(modalID)
+
+    modal.classList.add('active');
+
+    modal.addEventListener('click', (e) => {
+        if (e.target.id == "form") {
+            modal.classList.remove('active')
+
+        }
+    })
+}
+
+const button = document.querySelector("#action-btn ")
+const button2 = document.querySelector("#action-btn2 ")
+button.addEventListener('click', () => { startshow("form") })
+button2.addEventListener('click', () => { startshow("form") })
+
+

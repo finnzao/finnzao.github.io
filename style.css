@@ -6,6 +6,11 @@
 
 }
 
+mark {
+    color: #3cd300;
+    background-color: transparent;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -145,6 +150,7 @@ header .menu_button-form img {
     display: flex;
     align-items: self-end;
     justify-content: center;
+    text-align: left;
     flex-direction: column;
     margin-left: 100px;
 }
@@ -159,8 +165,8 @@ header .menu_button-form img {
 #home .container .content p {
     color: #ebe8e8;
     font-size: 1.2rem;
-    text-transform: lowercase;
-    letter-spacing: 3px;
+    text-align: justify;
+    letter-spacing: 1px;
     width: 800px;
 }
 
@@ -211,12 +217,16 @@ header .menu_button-form img {
     margin-left: 50px;
 }
 
+#about .about-c p {
+    margin: 40px 0px
+}
+
 #about p {
     margin-top: 10px;
     font-size: 120%;
     /* font-size: 1.2rem; */
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     color: #ffffff;
 }
 
@@ -453,7 +463,148 @@ body {
 }
 
 
+/* FORM */
 
+.form-container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(0, 0, 0, .8);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container.active {
+    display: flex;
+}
+
+.form-cont {
+
+    border-radius: 20px;
+    width: 60%;
+    height: 80%;
+    min-width: 300px;
+    padding: 40px;
+    border: 5px solid #3bd100;
+    background-color: rgb(34, 34, 34);
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.active .form-cont {
+    animation: show .3s;
+}
+
+.form-cont h1 {
+    margin: 60px 20px;
+    color: var(--main-bg-seconde);
+}
+
+.form-cont form {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-cont button {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1.0em 1.8em;
+    text-align: center;
+    border: 2px solid #42e73c;
+    cursor: pointer;
+    border-color: #000000;
+    border-radius: 0.6em;
+    color: rgb(7, 14, 0);
+    background-image: -webkit-linear-gradient(45deg, #010300 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #ffffff 50%, transparent 50%);
+
+}
+
+.form-cont span {
+    font-weight: 900;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.form-cont input {
+    align-items: center;
+    justify-content: center;
+    font-size: 180%;
+    height: 50px;
+    width: 90%;
+    font-weight: 900;
+    color: white;
+    background-color: transparent;
+}
+
+
+
+
+.button-green {
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #27ae60;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    padding: 13px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.button-green:hover {
+    background-color: #1e8449;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+}
+
+.button-green:active {
+    transform: translateY(2px);
+    transition-duration: .35s;
+}
+
+.button-green:hover {
+    box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
 
 /* CONTACTS */
 #contacts {
@@ -475,6 +626,7 @@ body {
 #contacts .contacts-c h1 {
     color: var(--main-bg-seconde);
     text-transform: uppercase;
+
 
 
 
@@ -510,6 +662,18 @@ body {
 
 #contacts .container .card h2 {
     font-size: 2rem;
+}
+
+#contacts p {
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 16px;
+    outline: none;
+    margin-top: 20px;
 }
 
 #contacts .container a {
@@ -668,7 +832,7 @@ footer .container a {
 
     #home .container .content p {
         width: 250px;
-        font-size: 0.8rem;
+        font-size: 1rem;
         padding: 20px;
     }
 
@@ -803,6 +967,10 @@ footer .container a {
 
     #contacts {
         display: block;
+    }
+
+    #contacts .contacts-c h1 {
+        font-size: 0.89rem;
     }
 
     /* MEMBERS */
