@@ -46,7 +46,7 @@
                 <p>O que mais falta hoje em dia nas empresas é uma presença de <mark>destaque</mark> na internet,
                     é necessário um serviço <mark>profissional</mark> para fazer seu negócio brilhar, é exatamente
                     isso que <mark>fazemos por você.</mark></p>
-                <a class="btn" href="#about"><button>Quero saber mais</button></a>
+                <a class="btn" href="#about" onsubmit="return false"><button>Quero saber mais</button></a>
             </div>
         </div>
     </main>
@@ -147,129 +147,140 @@
             </div>
         </div>
     </section>
-    <!--                                                         -->
+
+    <form class="send_form" style="display: none;" action="https://formsubmit.co/lipefelipe403@hotmail.com"
+        method="POST">
+
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input id="datefrom" type="text" class="form_cliente" name="cliente" value="1" required>
+        <input id="datefrom" type="text" class="form_email" name="Email" value="" required>
+        <input id="datefrom" type="text" class="form_number" name="Number" value="11" required>
+        <input id="datefrom" type="text" class="form_renda" name="Renda" value="" required>
+        <input id="datefrom" type="text" class="form_empresa" name="Empresa" value="" required>
+        <input id="datefrom" type="text" class="form_empregados" name="Empregados" value="" required>
+
+        <button id="formsend" type="submit">Send</button>
+    </form>
+</body>
+
+<div id="form" class="form-container ">
+
+    <div class="form-cont">
 
 
+        <h2>Responda o questionário abaixo para entramos em contato com você </h2>
 
-    <div id="form" class="form-container ">
+        <div id="progress_bar"></div>
+        <form class="questions_box">
 
-        <div class="form-cont">
+            <div id="question-1">
+                <div class="display-question-1">
+                    <h3>Qual seu nome?</h3>
+                    <input class="answer" id="question-1-answer-a" type="text" name="name" autocomplete="off">
 
-
-            <h2>Responda o questionário abaixo para entramos em contato com você </h2>
-
-            <div id="progress_bar"></div>
-            <form class="questions_box">
-
-                <div id="question-1">
-                    <div class="display-question-1">
-                        <h3>Qual seu nome?</h3>
-                        <input class="answer" id="question-1-answer-a" type="text" name="favelang">
-                        <div id="submit1" class="button">Enviar Resposta</div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-
-                <div id="question-2">
-
-                    <h3>Qual seu email?</h3>
-                    <input class="answer" id="question-2-answer-a" type="text" name="favelang">
-
-                    <div id="submit2" class="button">Enviar Resposta</div>
+                    <div type="submit" value="Submit" id="submit1" class="button">Enviar Resposta</div>
                     <div class="clearfix"></div>
                 </div>
+            </div>
 
-                <div id="question-3">
+            <div id="question-2">
 
-                    <h3>Qual seu número do celular?</h3>
-                    <input class="answer" id="question-3-answer-a" type="text" name="favelang">
+                <h3>Qual seu email?</h3>
+                <input class="answer" id="question-2-answer-a" type="text" name="favelang">
 
-                    <div id="submit3" class="button">Enviar Resposta</div>
-                    <div class="clearfix"></div>
-                </div>
+                <div id="submit2" class="button">Enviar Resposta</div>
+                <div class="clearfix"></div>
+            </div>
 
-                <div id="question-4">
+            <div id="question-3">
 
-                    <h3>Nome da empresa?</h3>
-                    <input class="answer" id="question-4-answer-a" type="text" name="favelang"> <br>
-                    <div id="submit4" class="button">Enviar Resposta</div>
-                    <div class="clearfix"></div>
-                </div>
+                <h3>Qual seu número do celular?</h3>
+                <input class="answer" id="question-3-answer-a" type="text" name="favelang" maxlength="13">
 
-                <div id="question-5">
+                <div id="submit3" class="button">Enviar Resposta</div>
+                <div class="clearfix"></div>
+            </div>
 
-                    <h3>Faturamento mensal:</h3>
-                    <input class="answer" id="question-5-answer-a" type="text" name="favelang">
-                    <section class="dark">
-                        <label>
-                            <input type="radio" name="dark" checked value="Até 20 mil">
-                            <span class="design"></span>
-                            <span class="text">Até 20 mil</span>
-                        </label>
+            <div id="question-4">
 
-                        <label>
+                <h3>Nome da empresa?</h3>
+                <input class="answer" id="question-4-answer-a" type="text" name="favelang" autocomplete="off">
+                <br>
+                <div id="submit4" class="button">Enviar Resposta</div>
+                <div class="clearfix"></div>
+            </div>
 
-                            <input type="radio" name="dark" value="21 mil à 70 mil">
-                            <span class="design"></span>
-                            <span class="text">21 mil - 70 mil</span>
-                        </label>
+            <div id="question-5">
 
-                        <label>
-                            <input type="radio" name="dark" value="70 mil à 100 mil">
-                            <span class="design"></span>
-                            <span class="text">70 mil - 100 mil</span>
-                        </label>
+                <h3>Faturamento mensal:</h3>
+                <input class="answer" id="question-5-answer-a" type="text" name="favelang">
+                <section class="dark">
+                    <label>
+                        <input type="radio" name="dark" checked value="Até 20 mil">
+                        <span class="design"></span>
+                        <span class="text">Até 20 mil</span>
+                    </label>
 
-                        <label>
-                            <input type="radio" name="dark" value="100 mil mil à 400 mil">
-                            <span class="design"></span>
-                            <span class="text">100 mil - 400 mil</span>
-                        </label>
+                    <label>
 
-                        <label>
-                            <input type="radio" name="dark" value="Mais de 400 mil">
-                            <span class="design"></span>
-                            <span class="text">Mais de 400 mil</span>
-                        </label>
-                    </section>
+                        <input type="radio" name="dark" value="21 mil à 70 mil">
+                        <span class="design"></span>
+                        <span class="text">21 mil - 70 mil</span>
+                    </label>
 
+                    <label>
+                        <input type="radio" name="dark" value="70 mil à 100 mil">
+                        <span class="design"></span>
+                        <span class="text">70 mil - 100 mil</span>
+                    </label>
 
-                    <div id="submit5" class="button">Enviar Resposta</div>
-                    <div class="clearfix"></div>
-                </div>
+                    <label>
+                        <input type="radio" name="dark" value="100 mil mil à 400 mil">
+                        <span class="design"></span>
+                        <span class="text">100 mil - 400 mil</span>
+                    </label>
 
-
-
-
-                <div id="question-6">
-                    <h3>Número de Funcionários?</h3>
-
-                    <input class="answer" id="question-6-answer-a" type=" number" name="favelang"> <br>
-                    <div id="submit6" class="button">Enviar Resposta</div>
-                    <div class="clearfix"></div>
+                    <label>
+                        <input type="radio" name="dark" value="Mais de 400 mil">
+                        <span class="design"></span>
+                        <span class="text">Mais de 400 mil</span>
+                    </label>
+                </section>
 
 
-
-                </div>
-
-                <div id="question-7">
-
-                    <h3>Agora você estar próximo de conseguir um avanço na sua empresa!<br>Em breve nossa equipe
-                        entrara em contato com você</h3>
-
-
-                    <div id="submit7" class="button">Fechar janela</div>
-                    <div class="clearfix"></div>
-                </div>
+                <div id="submit5" class="button">Enviar Resposta</div>
+                <div class="clearfix"></div>
+            </div>
 
 
 
-            </form>
+
+            <div id="question-6">
+                <h3>Número de Funcionários?</h3>
+
+                <input class="answer" id="question-6-answer-a" type=" number" name="favelang" autocomplete="off"
+                    required> <br>
+                <div id="submit6" class="button">Enviar Resposta</div>
+                <div class="clearfix"></div>
 
 
 
-        </div>
+            </div>
 
+            <div id="question-7">
+
+                <h3>Agora você estar próximo de conseguir um avanço na sua empresa!<br>Basta confirma e nossa equipe
+                    entrara em contato com você</h3>
+
+                <div onclick="sendform()" id="submit7" class="button">Confirmar Solicitação</div>
+                <div class="clearfix"></div>
+            </div>
+
+
+
+        </form>
 
 
 
@@ -277,33 +288,39 @@
 
 
 
-    <!--                                                                               -->
-    </section>
-    <section id="contacts">
-        <div class="contacts-c">
-            <h1>Quero aumentar os ganhos da minha empresa</h1>
-            <p>Basta clicar no botão abaixo e preencher o formulário para que nossa equipe de especialistas entre em
-                contato com você.</p>
-            <button id="action-btn2" class="button-green" target="_blank">RECEBER CONTATO</button>
 
-        </div>
-        </div>
+</div>
 
 
-    </section>
 
-    <footer>
-        <div class="container">
-            <span> Copyright 2022&copy; </span>
+<!--                                                                               -->
+</section>
+<section id="contacts">
+    <div class="contacts-c">
+        <h1>Quero aumentar os ganhos da minha empresa</h1>
+        <p>Basta clicar no botão abaixo e preencher o formulário para que nossa equipe de especialistas entre em
+            contato com você.</p>
+        <button id="action-btn2" class="button-green" target="_blank">RECEBER CONTATO</button>
 
-            <span>Made by <a href="https://github.com/finnzao" target="_blank"><strong>7K</strong></a></span>
-        </div>
-    </footer>
+    </div>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <script src="./components/js/main.js"></script>
+</section>
+
+<footer>
+    <div class="container">
+        <span> Copyright 2022&copy; </span>
+
+        <span>Made by <a href="https://github.com/finnzao" target="_blank"><strong
+                    style="color: rgb(101, 101, 245);">7K</strong></a></span>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="./components/js/main.js"></script>
 </body>
 
 </html>

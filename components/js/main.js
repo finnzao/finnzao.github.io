@@ -1,46 +1,4 @@
-// var button = document.getElementById("action-btn")
 
-// button.addEventListener("click", function () {
-//     var container = document.getElementById("form")
-//     if (container.style.display === "none") {
-//         container.style.display = "block"
-//     } else {
-//         container.style.display = "none"
-//     }
-// })
-// document.querySelector("#action-btn").addEventListener("click", function () {
-//     document.querySelector("#form").classList.add("active")
-// })
-
-
-//SLIDE FORM
-// var counterVal = 1;
-// var x = document.querySelector(`.input-1`)
-// function next() {
-//     if (counterVal >= 5) {
-//         counterVal = 5
-//     } else {
-//         ++counterVal
-//     }
-//     x = document.querySelector(`.input-${counterVal}`)
-
-// }
-// function prev() {
-//     if (counterVal <= 1) {
-//         counterVal = 1
-//     } else {
-//         --counterVal
-//     }
-//     x = document.querySelector(`.input-${counterVal}`)
-//     console.log(x)
-// }
-
-
-
-
-
-
-//BUTTON FORM
 function startshow(modalID) {
 
     const modal = document.getElementById(modalID)
@@ -63,6 +21,19 @@ const button2 = document.querySelector("#action-btn2 ")
 button.addEventListener('click', () => { startshow("form") })
 button2.addEventListener('click', () => { startshow("form") })
 //////FUNCTIOM BELOW
+
+
+
+
+function validate(element) {
+    let value = element.value
+
+    if (value === "") {
+        validate()
+    } else {
+        return true
+    }
+}
 
 var form_answer = {}
 
@@ -102,13 +73,13 @@ function answersave3() {
 }
 
 function answersave4(question_number, event) {
-    form_answer["Nome da Empresa"] = answer_four.value
+    form_answer["Empresa"] = answer_four.value
 }
 
 function answersave5(event) {
     if (event.target.type === 'radio') {
 
-        form_answer['Renda Mensal'] = (event.target.value);
+        form_answer['Renda'] = (event.target.value);
 
     }
 }
@@ -120,7 +91,7 @@ question_five.addEventListener('click', function (event) {
 
 
 function answersave6() {
-    form_answer["Número de empregados"] = answer_six.value
+    form_answer["Empregados"] = answer_six.value
 }
 
 
@@ -138,21 +109,26 @@ function nextQuestion(question_number) {
 }
 
 submit1.addEventListener('click', function () {
+    validate(answer_one)
     answersave1()
     nextQuestion(2);
     growProgressBar('17%');
 })
 submit2.addEventListener('click', function () {
+    validate(answer_two)
     answersave2()
     nextQuestion(3);
     growProgressBar('34%');
 })
 submit3.addEventListener('click', function () {
+    validate(answer_three)
     answersave3()
     nextQuestion(4);
     growProgressBar('51%');
 })
 submit4.addEventListener('click', function () {
+    validate(answer_four)
+    form_answer['Renda'] = 'Até 20 mil'
     answersave4()
     nextQuestion(5);
     growProgressBar('68%');
@@ -164,6 +140,7 @@ submit5.addEventListener('click', function () {
 
 
 submit6.addEventListener('click', function () {
+    validate(answer_six)
     growProgressBar('100%')
     answersave6()
     nextQuestion(7)
@@ -174,3 +151,45 @@ function growProgressBar(percentage_width) {
     var bar = document.getElementById("progress_bar");
     bar.style.width = percentage_width;
 }
+
+
+var date_form_cliente = document.getElementsByClassName("form_cliente")
+var date_form_email = document.getElementsByClassName("form_email")
+var date_form_number = document.getElementsByClassName("form_number")
+var date_form_company = document.getElementsByClassName("form_empresa")
+var date_form_renda = document.getElementsByClassName("form_renda")
+var date_form_empregados = document.getElementsByClassName("form_empregados")
+
+var form_send = document.getElementById("formsend")
+
+
+
+
+
+function sendform() {
+    date_form_cliente.cliente.value = form_answer.Nome
+    date_form_email.Email.value = form_answer.Email
+    date_form_number.Number.value = form_answer.Número
+    date_form_renda.Renda.value = form_answer.Renda
+    date_form_company.Empresa.value = form_answer.Empresa
+    date_form_empregados.Empregados.value = form_answer.Empregados
+    $("#formsend").trigger('click')
+}
+
+var inputNome = document.querySelector("#question-1-answer-a")
+console.log(inputNome)
+document.querySelector("#question-1-answer-a").addEventListener("keypress", function (e) {
+    var keyCode = (e.keyCode ? e.keyCode : e.which);
+
+    if (keyCode > 47 && keyCode < 58) {
+        e.preventDefault();
+    }
+});
+
+document.querySelector("#question-3-answer-a").addEventListener("keypress", function (e) {
+    var keyCode = (e.keyCode ? e.keyCode : e.which);
+
+    if (keyCode > 64) {
+        e.preventDefault();
+    }
+});

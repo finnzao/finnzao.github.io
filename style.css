@@ -11,6 +11,10 @@ mark {
     background-color: transparent;
 }
 
+.send_form {
+    display: none;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -550,6 +554,7 @@ body {
 
 
 #form input {
+    overflow: visible;
     width: 90%;
     color: #000;
     border-radius: 0.2rem;
@@ -1038,7 +1043,7 @@ footer .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: rgb(240, 240, 240);
 }
 
 footer .container span {
