@@ -97,7 +97,6 @@ section {
     color: #010c00;
     text-decoration: none;
     text-transform: uppercase;
-
     font-size: 1.1 rem;
 }
 
@@ -412,7 +411,7 @@ body {
     height: 100%;
     left: 0;
     top: 0;
-    background: rgba(255, 255, 255, 0.02);
+    background: 255 255 255 / 9%;
 }
 
 /* MEMBERS */
