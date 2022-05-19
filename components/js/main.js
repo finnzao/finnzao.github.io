@@ -193,3 +193,8 @@ document.querySelector("#question-3-answer-a").addEventListener("keypress", func
         e.preventDefault();
     }
 });
+
+
+document.querySelector(".answer").addEventListener('click', function () {
+    this.value = this.value;
+});

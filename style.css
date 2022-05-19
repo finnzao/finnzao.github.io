@@ -142,9 +142,13 @@ header .menu_button-form img {
 /* HOME */
 
 #home .container {
+    cursor: default;
     width: 100%;
     height: 100vh;
     background-color: var(--main-bg-background);
+    background-position-x: left;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
 
 }
 
@@ -204,6 +208,7 @@ header .menu_button-form img {
 
 /* ABOUT */
 #about {
+    cursor: default;
     background-color: var(--main-bg-background);
 }
 
@@ -310,6 +315,7 @@ body {
     list-style: none;
     text-align: center;
     justify-items: center;
+    cursor: default;
 }
 
 .tilesWrap li {
@@ -324,14 +330,17 @@ body {
     margin: 10px;
     font-family: 'helvetica', san-serif;
     min-height: 25vh;
-    background: #00000091;
+    background: transparent;
     background-image: url("./components/img/eye.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid #252727;
     text-align: left;
+    cursor: default;
 }
+
+
 
 .tilesWrap li:nth-child(1) {
     background-image: url(./components/img/eye.png);
@@ -412,7 +421,7 @@ body {
     height: 100%;
     left: 0;
     top: 0;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgb(255 255 255 / 9%);
 }
 
 /* MEMBERS */
@@ -1340,6 +1349,7 @@ footer .container a {
     #form .answer {
         height: 40px;
         font-size: 1rem;
+        overflow: initial;
     }
 
     #form .button {
