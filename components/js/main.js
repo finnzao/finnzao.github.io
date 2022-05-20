@@ -1,12 +1,11 @@
-
+// window.onload = function () {
+//     document.oncontextmenu = function () {
+//         return false
+//     }
+// }
 function startshow(modalID) {
-
     const modal = document.getElementById(modalID)
-
-
-
     modal.classList.add('active');
-
     modal.addEventListener('click', (e) => {
         if (e.target.id == "form" || e.target.id == "submit7") {
             modal.classList.remove('active')
@@ -20,20 +19,59 @@ const button2 = document.querySelector("#action-btn2 ")
 
 button.addEventListener('click', () => { startshow("form") })
 button2.addEventListener('click', () => { startshow("form") })
-//////FUNCTIOM BELOW
 
+const masks = {
+    phone(value) {
+        return value
+            .replace(/\D+/g, '')
+            .replace(/(\d{2})(\d)/, '($1) $2')
+            .replace(/(\d{4})(\d)/, '$1-$2')
+            .replace(/(\d{4})-(\d)(\d{4})/, '$1$2-$3')
+            .replace(/(-\d{4})\d+?$/, '$1')
+    },
 
+    phoneDDI(value) {
+        return value
+            .replace(/\D+/g, '')
+            .replace(/(\d{2})(\d)/, '+$1 $2')
+            .replace(/(\d{2})(\d)/, '($1) $2')
+            .replace(/(\d{4})(\d)/, '$1-$2')
+            .replace(/(\d{4})-(\d)(\d{4})/, '$1$2-$3')
+            .replace(/(-\d{4})\d+?$/, '$1')
+    }
+}
 
+document.querySelectorAll('#question-3-answer-a').forEach($input => {
+    const field = $input.dataset.js
+
+    $input.addEventListener('input', e => {
+        e.target.value = masks[field](e.target.value)
+    }, false)
+})
+
+function validateN(e) {
+    let value = e.value.length
+
+    if (value < 13) {
+        innerHTML
+        return validateN()
+    } else {
+        return true
+    }
+}
 
 function validate(element) {
     let value = element.value
 
     if (value === "") {
+        element.classList.add('erro')
         validate()
     } else {
+        element.classList.remove('erro')
         return true
     }
 }
+
 
 var form_answer = {}
 
@@ -107,7 +145,28 @@ function nextQuestion(question_number) {
     el.style.display = "flex";
     el2.style.display = "none";
 }
+////
 
+function validarEmail(e) {
+
+    var email = document.querySelector('#question-2-answer-a');
+    var error = document.querySelector('#error-email');
+
+    if (!email.checkValidity()) {
+        error.innerHTML = "Email invalido";
+    }
+
+}
+
+function redefinirMsg() {
+    var error = document.querySelector('#error-email');
+    if (error.innerHTML == "Email invalido") {
+        error.innerHTML = "";
+    }
+}
+
+
+////
 submit1.addEventListener('click', function () {
     validate(answer_one)
     answersave1()
@@ -116,12 +175,13 @@ submit1.addEventListener('click', function () {
 })
 submit2.addEventListener('click', function () {
     validate(answer_two)
+    validarEmail(answer_two)
     answersave2()
     nextQuestion(3);
     growProgressBar('34%');
 })
 submit3.addEventListener('click', function () {
-    validate(answer_three)
+    validateN(answer_three)
     answersave3()
     nextQuestion(4);
     growProgressBar('51%');
@@ -176,8 +236,8 @@ function sendform() {
     $("#formsend").trigger('click')
 }
 
-var inputNome = document.querySelector("#question-1-answer-a")
-console.log(inputNome)
+
+
 document.querySelector("#question-1-answer-a").addEventListener("keypress", function (e) {
     var keyCode = (e.keyCode ? e.keyCode : e.which);
 
@@ -198,3 +258,4 @@ document.querySelector("#question-3-answer-a").addEventListener("keypress", func
 document.querySelector(".answer").addEventListener('click', function () {
     this.value = this.value;
 });
+

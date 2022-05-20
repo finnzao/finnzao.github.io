@@ -97,6 +97,7 @@ section {
     color: #010c00;
     text-decoration: none;
     text-transform: uppercase;
+
     font-size: 1.1 rem;
 }
 
@@ -1344,6 +1345,18 @@ footer .container a {
     }
 
     /* FORM */
+
+    .answer .erro {
+        border: 2px red solid;
+    }
+
+    .erro {
+        border: 2px red solid;
+    }
+
+    .answer.erro {
+        border: 2px red solid;
+    }
 
     #form .answer {
         height: 40px;
