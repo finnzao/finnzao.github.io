@@ -563,6 +563,7 @@ body {
 
 
 #form input {
+
     overflow: visible;
     width: 90%;
     color: #000;
@@ -571,6 +572,20 @@ body {
     border: none;
     padding: 0.5rem 0.5rem;
     font-family: 'Lato', sans-serif;
+}
+
+#form svg {
+    height: 100%;
+    color: #000;
+    background-color: rgb(255, 255, 255);
+}
+
+#form .spaninput {
+    border-radius: 0.2rem;
+    width: 90%;
+    font-weight: 900;
+    background-color: rgb(255, 255, 255);
+    font-size: 1rem;
 }
 
 #form .container:after,
@@ -1207,28 +1222,7 @@ footer .container a {
         color: var(--main-bg-seconde);
     }
 
-    /* 
-    #how .tilesWrap li {
-        display: inline-block;
-        width: 20%;
-        min-width: 200px;
-        max-width: 530px;
-        padding: 50px 100px;
-    } */
 
-    /* #how .how-c {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    #how .how-to {
-        margin: 0;
-        align-items: center;
-
-        background-color: #fdfdfd;
-
-    } */
 
     /* CONTACTS */
     #contacts .container .card {
@@ -1252,7 +1246,12 @@ footer .container a {
     }
 
     /* FORM */
-    .form-cont form {
+
+    #form input {
+        width: 80%;
+    }
+
+    .form-cont .form-cont form {
         margin-top: 40px;
     }
 
@@ -1345,6 +1344,10 @@ footer .container a {
     }
 
     /* FORM */
+    #form svg {
+        position: relative;
+        top: 5px;
+    }
 
     .answer .erro {
         border: 2px red solid;

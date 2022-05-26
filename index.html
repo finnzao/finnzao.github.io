@@ -151,10 +151,16 @@
                 <div id="question-1">
                     <div class="display-question-1">
                         <h3>Qual seu nome?</h3>
-                        <input minlength="2" maxlength="50" onfocus="this.selectionStart = this.selectionEnd = 500;"
-                            class="answer" id="question-1-answer-a" type="text" name="name"
-                            placeholder="Seu nome aqui..." autocomplete="off">
 
+                        <span class="spaninput">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 -2 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                            <input minlength="2" maxlength="50" onfocus="this.selectionStart = this.selectionEnd = 500;"
+                                class="answer" id="question-1-answer-a" type="text" name="name"
+                                placeholder="Seu nome aqui..." autocomplete="off">
+                        </span>
                         <div type="submit" value="Submit" id="submit1" class="button">Enviar Resposta</div>
                         <div class="clearfix"></div>
                     </div>
@@ -163,8 +169,15 @@
                 <div id="question-2">
 
                     <h3>Qual seu email?</h3>
-                    <input maxlength="50" class="answer" id="question-2-answer-a" type="email" name="favelang"
-                        placeholder="Email...">
+                    <span class="spaninput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor"
+                            class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                        </svg>
+                        <input maxlength="50" class="answer" id="question-2-answer-a" type="email" name="favelang"
+                            placeholder="Email...">
+                    </span>
 
                     <div id="submit2" class="button">Enviar Resposta</div>
                     <div class="clearfix"></div>
@@ -173,8 +186,16 @@
                 <div id="question-3">
 
                     <h3>Qual seu número do celular?</h3>
-                    <input class="answer" id="question-3-answer-a" type="text" name="favelang" maxlength="30"
-                        placeholder="Número..." data-js="phone">
+
+                    <span class="spaninput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-phone-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z" />
+                        </svg>
+                        <input inputmode="numeric" class="answer" id="question-3-answer-a" type="text" name="favelang"
+                            maxlength="30" placeholder="Número..." data-js="phone">
+                    </span>
 
                     <div id="submit3" class="button">Enviar Resposta</div>
                     <div class="clearfix"></div>
@@ -183,8 +204,18 @@
                 <div id="question-4">
 
                     <h3>Nome da empresa?</h3>
-                    <input maxlength="30" class="answer" id="question-4-answer-a" type="text" name="favelang"
-                        placeholder="Empresa..." autocomplete="off">
+
+                    <span class="spaninput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor"
+                            class="bi bi-building" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z" />
+                            <path
+                                d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
+                        </svg>
+                        <input maxlength="30" class="answer" id="question-4-answer-a" type="text" name="favelang"
+                            placeholder="Empresa..." autocomplete="off">
+                    </span>
                     <br>
                     <div id="submit4" class="button">Enviar Resposta</div>
                     <div class="clearfix"></div>
@@ -237,9 +268,16 @@
 
                 <div id="question-6">
                     <h3>Número de Funcionários?</h3>
-
-                    <input maxlength="20" class="answer" id="question-6-answer-a" type=" number" name="favelang"
-                        autocomplete="off" required> <br>
+                    <span class="spaninput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor"
+                            class="bi bi-boxes" viewBox="0 0 16 16">
+                            <path
+                                d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z" />
+                        </svg>
+                        <input inputmode="numeric" maxlength="20" class="answer" id="question-6-answer-a" type=" number"
+                            name="favelang" autocomplete="off" required>
+                    </span>
+                    <br>
                     <div id="submit6" class="button">Enviar Resposta</div>
                     <div class="clearfix"></div>
 
