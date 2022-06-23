@@ -1,8 +1,8 @@
-window.onload = function () {
-     document.oncontextmenu = function () {
-         return false
-     }
-}
+// window.onload = function () {
+//      document.oncontextmenu = function () {
+//          return false
+//      }
+// }
 function startshow(modalID) {
     const modal = document.getElementById(modalID)
     modal.classList.add('active');
