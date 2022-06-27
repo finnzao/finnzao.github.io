@@ -444,7 +444,7 @@ body {
 }
 
 .members-c span {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .members-c {
@@ -494,6 +494,14 @@ body {
     width: 100%;
     float: left;
     box-sizing: border-box;
+}
+
+#form:focus,
+input:focus,
+select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
 }
 
 @media (min-width: 640px) {
@@ -778,6 +786,7 @@ h4 {
 
 
 .button-green {
+
     appearance: none;
     backface-visibility: hidden;
     background-color: #27ae60;
