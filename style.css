@@ -302,6 +302,10 @@ mark {
 }
 
 @media only screen and (max-width: 425px) {
+    .button_blue {
+        padding: 17px 40px;
+    }
+
     .text_land span {
         font-size: 1.5rem;
     }
@@ -319,6 +323,10 @@ mark {
         padding-right: 0px;
         flex-direction: column;
         align-items: center;
+    }
+
+    .button_rotation a {
+        font-size: 80%;
     }
 
     .contact h2 {
