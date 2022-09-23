@@ -329,6 +329,10 @@ mark {
         font-size: 70%;
     }
 
+    .button_blue {
+        padding: 20px 38px;
+    }
+
     .contact h2 {
         font-size: 1.7rem;
     }
