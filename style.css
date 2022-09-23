@@ -135,6 +135,10 @@ mark {
     width: 100%;
 }
 
+.img_land_mobile {
+    display: none;
+}
+
 
 
 
@@ -200,6 +204,15 @@ mark {
 
     .img_land {
         display: none;
+    }
+
+    .img_land_mobile {
+        max-width: 50%;
+        display: block
+    }
+
+    .img_land_mobile img {
+        max-width: 100%;
     }
 
     .text_land h4 {
@@ -281,6 +294,19 @@ mark {
         font-size: 2rem;
     }
 
+    .img_land_mobile {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .text_land h4 {
+        text-align: center;
+    }
+
+    .text_land span {
+        font-size: 1.2rem !important;
+    }
+
     .button_rotation a:before,
     .button_rotation a:after {
         width: 180px !important;
@@ -306,9 +332,7 @@ mark {
         padding: 17px 40px;
     }
 
-    .text_land span {
-        font-size: 1.5rem;
-    }
+
 
     .text_land h4 {
         display: flex;
@@ -326,7 +350,7 @@ mark {
     }
 
     .button_rotation a {
-        font-size: 70%;
+        font-size: 80% !important;
     }
 
     .button_blue {
