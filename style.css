@@ -330,11 +330,11 @@ mark {
     }
 
     .button_blue {
-        padding: 20px 38px;
+        padding: 20px 38px !important;
     }
 
     .contact h2 {
-        font-size: 1.7rem;
+        font-size: 1.7rem !important;
     }
 
 }
