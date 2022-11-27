@@ -1,11 +1,31 @@
+:root {
+    --color-prim: #36393b;
+    --color-2: #4a5f67;
+    --color-3: #eee6ab;
+    --color-4: #696758;
 
-*{
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
 }
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: white;
     width: 100vw;
     height: 100vh;
 }
+
 .box{
     width: 300px;
     height: 200px;
@@ -21,17 +41,13 @@ body{
     overflow-x: hidden;
 }
 .first{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
     scroll-snap-align: start;  
 }
 .second{
     padding-top: 20px;
-    display: grid;
-    height: max-content;  
+    height: max-content;
     scroll-behavior: smooth;
     scroll-snap-align: start end;
 }
@@ -39,4 +55,223 @@ body{
 .container section {
     min-width: 100vw;
     min-height: 100vh;
+}
+
+
+
+
+
+.header {
+    padding-top: 100px;
+    height: 100vh;
+    background-image: url('./media/lawerback.png');
+    background-size: cover;
+    background-blend-mode: color-burn 2px;
+    background-color: var(--color-prim);
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+
+.title {
+    text-shadow: 1px 1px 5px black;
+    margin-top: 100px;
+    display: flex;
+    padding-left: 4%;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+
+.title h1 {
+    border-left: 5px solid var(--color-prim);
+    font-size: 400%;
+}
+
+
+
+.title .text_about {
+    margin-bottom: 50px;
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.separation {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(252, 252, 173);
+}
+
+
+.categorias {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px 0px 40px 0px;
+}
+
+.container_categorias h1 {
+    color: var(--color-2);
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    background-color: #4a5f67;
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgb(50 50 50 / 22%);
+    padding: 30px;
+    margin: 20px;
+    transition: all 0.3s ease-out;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.card_img img {
+
+    width: 50px;
+
+
+}
+
+.about {
+    text-shadow: 1px 1px 5px black;
+    background-image: url('./media/pexels-andrea-piacquadio-3771097.jpg');
+    background-size: cover;
+    background-position: top;
+    padding: 20px;
+    min-height: 90vh;
+    background-color: var(--color-prim);
+}
+
+.about h1 {
+    font-size: 4rem;
+}
+
+.about_text {
+    font-size: 200%;
+}
+
+.contact {
+    min-height: 50vh;
+    background-color: var(--color-prim);
+}
+
+.footer .social {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color-prim);
+}
+
+/* MEDIA SOCIAL */
+@media (max-width:768px) {
+    .categorias {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:450px) {
+    .title h1 {
+        font-size: 300%;
+    }
+
+    .header {
+        padding-top: 10px;
+    }
+
+    .title .text_about {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        font-size: 1.3rem;
+    }
+
+    .bn1 {
+        width: 60% !important;
+        height: 40px;
+    }
+
+    .categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .about_text {
+        font-size: 150%;
+    }
+}
+
+/* FEATURES */
+.bn1 {
+    width: 30%;
+    background-color: #000000;
+    display: inline-block;
+    padding: 0.6em 1.7em;
+    border: 0.1em solid #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 1.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.bn1:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+
+.bn632-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #000000;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 10px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+    outline: none;
+}
+
+.bn632-hover.bn25 {
+    background-image: linear-gradient(to right,
+            #29323c,
+            #485563,
+            #353c41,
+            #eee6ab);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
